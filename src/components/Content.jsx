@@ -26,7 +26,7 @@ const Content = ({ activePdf }) => {
           </div>
         )
       ) : (
-        <div className="flex justify-center items-center h-full text-white">
+        <div className="flex mx-auto items-center h-full text-white">
           <p className="text-lg font-medium">Silakan pilih menu untuk melihat konten.</p>
         </div>
       )}
