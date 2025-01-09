@@ -89,13 +89,19 @@ function App() {
           title="Buku"
           icon={<FaBook />}
           items={menuBuku}
-          onMenuClick={(menu) => { setActivePdf(menu.file); setIsSidebarOpen(false); }}
+          onMenuClick={(menu) => {
+            setActivePdf(menu.file);
+            setIsSidebarOpen(false);
+          }}
         />
         <Menu
           title="Jadwal"
           icon={<FaCalendarAlt />}
           items={menuJadwal}
-          onMenuClick={(menu) => { setActivePdf(menu.file); setIsSidebarOpen(false); }}
+          onMenuClick={(menu) => {
+            setActivePdf(menu.file);
+            setIsSidebarOpen(false);
+          }}
         />
         <Menu
           title="Aspirasi"
@@ -117,7 +123,7 @@ function App() {
 
       <div className="flex-1 p-6 md:ml-1/4  ">
         {showWallpaper ? (
-          <div className="flex-1 flex w-full md:w-3/4 ml-auto h-full px-4 pl-4 mr-4 md:p-6 items-center bg-cover bg-center p-16">
+          <div className="flex-1 flex w-full md:w-3/4 ml-auto h-full items-center bg-cover bg-center">
             <img src={wallpaper} alt="Wallpaper" className="w-full h-full rounded-sm object-cover" />
           </div>
         )

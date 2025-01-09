@@ -1,20 +1,24 @@
 /* eslint-disable react/prop-types */
+import IdleVideo from "./Screen";
 const Content = ({ activePdf }) => {
-  // Fungsi untuk mendapatkan ekstensi file
+  
+
   const getFileType = (fileName) => {
-    return fileName.split('.').pop().toLowerCase(); // Mendapatkan ekstensi file
+    return fileName.split('.').pop().toLowerCase(); 
   };
 
   return (
-    <div className="flex-1 flex w-full md:w-3/4 ml-auto h-full  md:p-6    text-white overflow-auto">
+    <div
+      className="flex-1 flex w-full md:w-3/4 ml-auto h-full md:py-6 md:pl-4 text-white overflow-auto"
+    >
       {activePdf ? (
-        getFileType(activePdf) === "pdf" ? ( // Jika file PDF
+        getFileType(activePdf) === "pdf" ? ( 
           <iframe
             src={`/data/${activePdf}`}
             title="PDF Viewer"
             className="w-full h-full border-none"
           ></iframe>
-        ) : getFileType(activePdf) === "jpg" || getFileType(activePdf) === "png" ? ( // Jika file gambar
+        ) : getFileType(activePdf) === "jpg" || getFileType(activePdf) === "png" ? ( 
           <img
             src={`/data/${activePdf}`}
             alt="Gambar Viewer"
@@ -26,9 +30,7 @@ const Content = ({ activePdf }) => {
           </div>
         )
       ) : (
-        <div className="flex mx-auto items-center h-full text-white">
-          <p className="text-lg font-medium">Silakan pilih menu untuk melihat konten.</p>
-        </div>
+        <IdleVideo />
       )}
     </div>
   );
