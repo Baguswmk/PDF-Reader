@@ -50,8 +50,8 @@ function App() {
         wallpaperTimeout = setTimeout(() => {
           setShowWallpaper(false); 
           setIsIdle(true); 
-        }, 2000); // Durasi wallpaper (5 detik)
-      }, 1000); // Durasi idle (5 menit tanpa aktivitas)
+        }, 5000); // Durasi wallpaper (5 detik)
+      }, 300000); // Durasi idle (5 menit tanpa aktivitas)     
     };
 
     // Event listener untuk aktivitas pengguna
