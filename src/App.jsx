@@ -50,8 +50,8 @@ function App() {
         wallpaperTimeout = setTimeout(() => {
           setShowWallpaper(false); 
           setIsIdle(true); 
-        }, 5000); // Durasi wallpaper (5 detik)
-      }, 300000); // Durasi idle (5 menit tanpa aktivitas)
+        }, 2000); // Durasi wallpaper (5 detik)
+      }, 1000); // Durasi idle (5 menit tanpa aktivitas)
     };
 
     // Event listener untuk aktivitas pengguna
@@ -121,7 +121,7 @@ function App() {
       {/* Content */}
       <div className="flex-1 p-6 md:ml-1/4  ">
         {showWallpaper ? (
-          <div className="flex-1 flex justify-center items-center bg-cover bg-center p-16">
+          <div className="flex-1 flex w-full md:w-3/4 ml-auto h-full px-4 pl-4 mr-4 md:p-6 items-center bg-cover bg-center p-16">
             <img src={wallpaper} alt="Wallpaper" className="w-full h-full rounded-sm object-cover" />
           </div>
         )
