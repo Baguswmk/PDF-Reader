@@ -4,7 +4,7 @@ import Content from "./components/Content";
 import IdleVideo from "./components/Screen";
 import { FaBook, FaCalendarAlt, FaLightbulb } from "react-icons/fa";
 import wallpaper from "./assets/wallpaper.jpg";
-
+import "./App.css";
 function App() {
   const menuBuku = [
     { label: "Ad Art", file: "Ad-ART.pdf" },
