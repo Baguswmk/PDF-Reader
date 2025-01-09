@@ -1,8 +1,8 @@
 const IdleVideo = () => {
   return (
-    <div className="flex-1 flex justify-center items-center bg-gray-800">
+    <div className="flex-1 flex justify-center items-center bg-black">
       <video
-        className="w-3/4 h-3/4"
+        className="w-full h-full object-cover"
         autoPlay
         loop
         muted
