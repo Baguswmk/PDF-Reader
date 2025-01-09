@@ -6,7 +6,7 @@ const Content = ({ activePdf }) => {
   };
 
   return (
-    <div className="flex-1 flex w-full md:w-3/4 ml-auto h-full px-4 pl-4 mr-4 md:p-6  bg-gray-800 text-white overflow-auto">
+    <div className="flex-1 flex w-full md:w-3/4 ml-auto h-full  md:p-6    text-white overflow-auto">
       {activePdf ? (
         getFileType(activePdf) === "pdf" ? ( // Jika file PDF
           <iframe
